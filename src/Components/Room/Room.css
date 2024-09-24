@@ -5,10 +5,14 @@
     flex-direction: column;
 }
 
-.room h1 { 
+.room-main-header, .room-tag-header { 
     margin-bottom: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.room-tag-header { 
+    color: #ff4f3b;;
 }

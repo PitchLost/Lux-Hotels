@@ -7,10 +7,10 @@ function Room() {
     const [selectedTag, setSelectedTag] = useState({label: 'Premium', filter: 'prem'})
   return (
     <div className='room'>
-      <h1>View our available rooms</h1>
+      <h1 className='room-main-header'>View our available rooms</h1>
       <div className='room-tags'> 
         <Tags selectedTag={selectedTag} setSelectedTag={setSelectedTag} />
-        <h1>{selectedTag.label}</h1>
+        <h1 className='room-tag-header'>{selectedTag.label}</h1>
         <Rooms tag={selectedTag} />
       </div>
     </div>

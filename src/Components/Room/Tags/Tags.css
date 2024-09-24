@@ -1,43 +1,32 @@
-.tags { 
+.tags {
     display: flex;
     justify-content: space-around; /* Distributes space evenly around the tags */
     align-items: center;
     flex-direction: row;
     width: 100vw;
+    padding: 10px 0; /* Added padding for spacing */
+    position: sticky;
+    top: 8vh;
+    background-color: white;
 }
 
-.tag { 
+.tag {
     display: flex; /* Flexbox to make gap and alignment work */
     justify-content: center; /* Align content inside each tag */
     align-items: center; /* Align vertically */
-    width: 7vw;
-    height: 5vh;
+    width: 8vw; /* Slightly increased width for better visibility */
+    height: 6vh; /* Slightly increased height for a more balanced look */
     color: white;
-    border-radius: 15px;
-    font-size: 6mm;
-}
-
-.tag:nth-child(1) {
-    background-color: #FF6347; /* Tomato */
-}
-
-.tag:nth-child(2) {
-    background-color: red; /* SteelBlue */
-}
-
-.tag:nth-child(3) {
-    background-color: #32CD32; /* LimeGreen */
-}
-
-.tag:nth-child(4) {
-    background-color: #FFD700; /* Gold */
-}
-
-.tag:nth-child(5) {
-    background-color: #FF69B4; /* HotPink */
+    background-color: #ff6f61;
+    border-radius: 25px; /* Increased border-radius for a more modern feel */
+    font-size: 1rem; /* Use rem for responsive typography */
+    font-weight: 500; /* Slightly bolder text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
 }
 
 
 .tag:hover { 
-    background-color: cornflowerblue;
+    background-color: #ff4f3b;
+    transform: scale(1.05); /* Slightly enlarges the tag on hover */
 }
