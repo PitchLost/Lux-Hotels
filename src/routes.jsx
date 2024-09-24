@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 // Import the components that need routing
-import Landing from './Components/Landing/Landing' 
+import Home from './Components/Home/Home' 
 
 
 // Best to not modify any of this add onto it but try not change anything
@@ -11,7 +11,7 @@ import Landing from './Components/Landing/Landing'
 function AppRoutes() {
   return (
     <Routes>
-        <Route path="/" element={<Landing />} /> 
+        <Route path="/" element={<Home />} /> 
     </Routes>
   );
 }

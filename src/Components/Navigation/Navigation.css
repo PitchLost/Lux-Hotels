@@ -2,6 +2,7 @@
 .navigation { 
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 nav {
@@ -23,10 +24,12 @@ nav {
   .segment {
     display: flex;
     align-items: center;
+    max-height: 5vh;
   }
   
   .segment h1 {
-    font-size: 24px;
+    font-weight: bold;
+    font-size: 9mm;
     margin: 0;
   }
   
@@ -37,7 +40,6 @@ nav {
   .segment a {
     text-decoration: none;
     color: #333;
-    font-size: 18px;
   }
   
   .segment li.book-btn a {
@@ -55,5 +57,4 @@ nav {
   .segment a:hover {
     color: #ff6f61;
   }
-  
   
