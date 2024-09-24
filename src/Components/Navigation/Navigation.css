@@ -1,0 +1,40 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(34, 31, 31);
+}
+
+
+
+
+.nav-links ul {
+  display: flex;
+  list-style-type: none;
+  color: white;
+}
+
+a { 
+  color: white;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: greenyellow;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
