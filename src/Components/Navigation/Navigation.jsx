@@ -4,7 +4,7 @@ import './Navigation.css'
 
 function Navigation() {
   return (
-    <div>
+    <div className='navigation'>
       <nav> 
         <ul> 
             <section className='segment'> 

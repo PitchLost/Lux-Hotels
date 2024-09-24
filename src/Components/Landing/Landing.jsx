@@ -5,8 +5,8 @@ import './Landing.css';
 function Landing() {
   return (
     <div className="landing-container">
-      <h1>Effortlessly book a room,</h1>
-      <h2>Staff you can trust</h2>
+      <h1>Welcome to Lux Hotels,</h1>
+      <h2>Booking a room has never been easier</h2>
       <img src={Image1} alt="Luxurious Hotel Lobby" />
       <button className="landing-button">Book Now</button>
     </div>

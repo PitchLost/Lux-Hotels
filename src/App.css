@@ -3,3 +3,11 @@
   padding: 0;
 }
 
+.App { 
+  height: fit-content;
+  min-height: 100vh;
+}
+
+body { 
+  background-color: rgba(254, 254, 254);
+}
