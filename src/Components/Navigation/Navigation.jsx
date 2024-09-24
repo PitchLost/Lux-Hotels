@@ -8,12 +8,12 @@ function Navigation() {
       <nav> 
         <ul> 
             <section className='segment'> 
-                <h1 className='title'><Link>Lux Haven Hotels</Link></h1>
+                <h1 className='title'><Link to='/'>Lux Haven Hotels</Link></h1>
             </section>
             <section className='segment'> 
                 <li><Link >Who are we</Link></li>
                 <li><Link >View our options</Link></li>
-                <li className='book-btn'><Link >Book a room</Link></li>
+                <li className='book-btn'><Link to='/room' >Book a room</Link></li>
             </section>
         </ul>
       </nav>

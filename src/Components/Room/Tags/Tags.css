@@ -1,0 +1,43 @@
+.tags { 
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly around the tags */
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.tag { 
+    display: flex; /* Flexbox to make gap and alignment work */
+    justify-content: center; /* Align content inside each tag */
+    align-items: center; /* Align vertically */
+    width: 7vw;
+    height: 5vh;
+    color: white;
+    border-radius: 15px;
+    font-size: 6mm;
+}
+
+.tag:nth-child(1) {
+    background-color: #FF6347; /* Tomato */
+}
+
+.tag:nth-child(2) {
+    background-color: red; /* SteelBlue */
+}
+
+.tag:nth-child(3) {
+    background-color: #32CD32; /* LimeGreen */
+}
+
+.tag:nth-child(4) {
+    background-color: #FFD700; /* Gold */
+}
+
+.tag:nth-child(5) {
+    background-color: #FF69B4; /* HotPink */
+}
+
+
+.tag:hover { 
+    background-color: cornflowerblue;
+}
