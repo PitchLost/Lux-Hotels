@@ -7,6 +7,7 @@ import { Context } from '../../../App';
 function Rooms({ tag }) {
     const navigate = useNavigate()
     const [selectedRoom, setSelectedRoom] = useContext(Context)
+
     
     const RoomsArray = [ 
         {name: 'Penthouse', description: 'Enjoy the stunning views of the city skyline from our luxurious penthouse suite, complete with modern amenities and spacious living areas.', tags: 'prem', image: 'https://cdn.pixabay.com/photo/2014/07/10/17/17/hotel-389256_960_720.jpg'},
@@ -21,7 +22,7 @@ function Rooms({ tag }) {
     ];
 
     useEffect(() => { 
-        if (selectedRoom) { 
+        if (selectedRoom !== null) { 
             navigate('/view')
         }
     }, [selectedRoom])
