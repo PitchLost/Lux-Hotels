@@ -35,7 +35,7 @@ function View() {
             </div>
             <div className='view-external'> 
                 <p>Please note that our rooms can be booked completely out occasions such as public holidays or weekends</p>
-                <button>Book Room</button>
+                <button onClick={() => navigate('/booking')}>Book Room</button>
 
                 <p>Not quite what you are looking for? Feel free to click the button below to return to the room selection page</p>
                 <button onClick={() => handleReturnToRoom()}>Return to selection</button>
