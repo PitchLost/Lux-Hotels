@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Rooms.css';
 
+import { Context } from '../../../App';
+
 function Rooms({ tag }) {
+    const navigate = useNavigate()
+    const [selectedRoom, setSelectedRoom] = useContext(Context)
+    
     const RoomsArray = [ 
         {name: 'Penthouse', description: 'Enjoy the stunning views of the city skyline from our luxurious penthouse suite, complete with modern amenities and spacious living areas.', tags: 'prem', image: 'https://cdn.pixabay.com/photo/2014/07/10/17/17/hotel-389256_960_720.jpg'},
         {name: 'Penthouse Basic', description: 'A more affordable option of our penthouse, offering beautiful views without compromising comfort.', tags: 'prem', image: 'https://cdn.pixabay.com/photo/2016/10/13/09/06/travel-1737168_960_720.jpg'},
@@ -14,13 +20,20 @@ function Rooms({ tag }) {
         {name: '2 Singles', description: 'This room features two single beds, ideal for friends or colleagues traveling together.', tags: 'basic', image: 'https://cdn.pixabay.com/photo/2021/12/18/06/13/hotel-6878054_1280.jpg'},
     ];
 
+    useEffect(() => { 
+        if (selectedRoom) { 
+            navigate('/view')
+        }
+    }, [selectedRoom])
+
+
     // If tag.filter is empty, show all rooms; otherwise, filter based on tag
     const FilteredRooms = tag.filter === '' 
         ? RoomsArray 
         : RoomsArray.filter(room => room.tags === tag.filter);
 
     const RoomsElement = FilteredRooms.map(room => (
-        <div className='rooms-room' key={room.name}> 
+        <div className='rooms-room' key={room.name} onClick={() => setSelectedRoom(room)}> 
             <h1>{room.name}</h1>
             <p>{room.description}</p>
             <img className='room-img' src={room.image} alt={room.name}></img>
