@@ -50,6 +50,16 @@
     color: #777;
 }
 
+
+
+.purchase-nights-input { 
+    width: 5vw;
+    height: 3vh;
+    border-radius: 15px;
+    font-size: 4mm;
+    
+}
+
 /* Button styling */
 button {
     font-size: 1.2rem;
