@@ -11,3 +11,10 @@
 body { 
   background-color: rgba(254, 254, 254);
 }
+
+@media (max-width: 600px) { 
+  img { 
+    width: 100vw;
+    height: 50vh;
+  }
+}

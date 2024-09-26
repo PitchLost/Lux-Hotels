@@ -11,8 +11,8 @@ function Navigation() {
                 <h1 className='title'><Link to='/'>Lux Haven Hotels</Link></h1>
             </section>
             <section className='segment'> 
-                <li><Link >Who are we</Link></li>
-                <li><Link >View our options</Link></li>
+                <li className='gen-link'><Link >Who are we</Link></li>
+                <li className='gen-link'><Link >View our options</Link></li>
                 <li className='book-btn'><Link to='/room' >Book a room</Link></li>
             </section>
         </ul>
