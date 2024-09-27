@@ -2,11 +2,11 @@ import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Rooms.css';
 
-import { Context } from '../../../App';
+import { RoomContext } from '../../../App';
 
 function Rooms({ tag }) {
     const navigate = useNavigate()
-    const [selectedRoom, setSelectedRoom] = useContext(Context)
+    const [selectedRoom, setSelectedRoom] = useContext(RoomContext)
 
     
     const RoomsArray = [ 

@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { Context } from '../../../App'
+import { RoomContext } from '../../../App'
 
 import './View.css'
 
 function View() {
     const navigate = useNavigate()
-    const [selectedRoom, setSelectedRoom] = useContext(Context)
+    const [selectedRoom, setSelectedRoom] = useContext(RoomContext)
 
     function handleReturnToRoom() { 
         setSelectedRoom(null) 

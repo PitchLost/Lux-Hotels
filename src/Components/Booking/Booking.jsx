@@ -1,15 +1,15 @@
 import React, { useState, useContext } from 'react';
-import { Context } from '../../App';
+import { RoomContext } from '../../App';
 import './Booking.css';
 
 import { purchaseRoom } from '../../Hooks/purchaseRoom'
 function Booking() {
-  const [selectedRoom] = useContext(Context); // Get the selected room from context
+  const [selectedRoom] = useContext(RoomContext);
   const [nights, setNights] = useState(1); // Default to 1 night
-  const [totalPrice, setTotalPrice] = useState(selectedRoom.price); // Initialize with the room price
+  const [totalPrice, setTotalPrice] = useState(selectedRoom.price);
 
   const handleNightsChange = (e) => {
-    const nightsValue = parseInt(e.target.value, 10) || 1; // Get the input value and handle invalid inputs
+    const nightsValue = parseInt(e.target.value, 10) || 1; 
     setNights(nightsValue);
     setTotalPrice(selectedRoom.price * nightsValue); // Update the total price
   };

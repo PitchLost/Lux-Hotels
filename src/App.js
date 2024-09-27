@@ -6,9 +6,9 @@ import Navigation from './Components/Navigation/Navigation';
 import React, { useState } from 'react';
 
 
-export const Context = React.createContext(); 
+export const RoomContext = React.createContext(); 
 function App() {
-
+  const [user, setUser] = useState(null)
   const [selectedRoom, setSelectedRoom] = useState(null)
 
   
@@ -16,9 +16,9 @@ function App() {
     <div className="App">
       <Router>
             <Navigation />
-            <Context.Provider value={[selectedRoom, setSelectedRoom]}>
+            <RoomContext.Provider value={[selectedRoom, setSelectedRoom]}>
               <AppRoutes />
-            </Context.Provider>
+            </RoomContext.Provider>
       </Router>
     </div>
   );
