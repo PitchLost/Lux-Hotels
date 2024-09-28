@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 import Landing from '../Landing/Landing'
 import Trust from '../Trust/Trust'
+import Services from '../Services/Services'
 
 function Home() {
 const navigate = useNavigate()
@@ -16,6 +17,7 @@ function openRoomSelection() {
     <div>
       <Landing />
       <Trust />
+      <Services />
     </div>
   )
 }
