@@ -8,6 +8,14 @@
   min-height: 100vh;
 }
 
+.app-dark { 
+  background-color: black;
+  color: white;
+}
+.app-dark h1 { 
+  color: white;
+}
+
 body { 
   background-color: rgba(254, 254, 254);
 }
@@ -26,3 +34,4 @@ body {
 .dark-secondary { 
   background-color: rgb(31, 28, 28);
 }
+

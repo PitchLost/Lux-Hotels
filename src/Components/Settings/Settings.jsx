@@ -10,12 +10,17 @@ function Settings() {
   const [notifications, setNotifications] = useState(true);
   const [darkMode, setDarkMode] = useContext(DarkContext)
 
+
+  // Handler Functions
   const handleUsernameChange = (e) => setUser({username: e.target.value});
   const handleNotificationsToggle = () => setNotifications(!notifications);
   const handleDarkModeToggle = () => setDarkMode(!darkMode)
 
+  // Settings Dark Mode 
+  const settingsClass = darkMode ? 'settings-dark':'settings-light'
+
   return (
-    <div className="settings-tab">
+    <div className={`settings-tab ${settingsClass}`}>
       <h2>Settings</h2>
 
       <div className="settings-item">
@@ -39,7 +44,7 @@ function Settings() {
         />
       </div>
       <div className="settings-item">
-        <label htmlFor="notifications">Toggle Dark Mode</label>
+        <label htmlFor="notifications">Enable Dark Mode</label>
         <input
           type="checkbox"
           id="darkmode"

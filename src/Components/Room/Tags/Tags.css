@@ -10,6 +10,10 @@
     background-color: white;
 }
 
+.tags-dark { 
+    background-color: rgb(41, 34, 34);
+}
+
 .tag {
     display: flex; /* Flexbox to make gap and alignment work */
     justify-content: center; /* Align content inside each tag */

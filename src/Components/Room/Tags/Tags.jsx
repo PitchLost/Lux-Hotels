@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Tags.css'
 
+import { DarkContext } from '../../../App';
+
 function Tags({setSelectedTag}) {
+
+    const [darkMode, setDarkMode] = useContext(DarkContext) 
+    const tagsClass = darkMode ? 'tags-dark':'tags-light'
     const tags = [ 
         {label: 'Premium', filter: 'prem'},
         {label: 'Economy+', filter: 'eco2'},
@@ -22,7 +27,7 @@ function Tags({setSelectedTag}) {
     ));
 
     return (
-        <div className='tags'>
+        <div className={`tags ${tagsClass}`}>
             {tagsElement}  {/* Render the tags */}
         </div>
     );

@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import './Rooms.css';
 
 import { RoomContext } from '../../../App';
+import { DarkContext } from '../../../App';
 
 function Rooms({ tag }) {
     const navigate = useNavigate()
     const [selectedRoom, setSelectedRoom] = useContext(RoomContext)
+    const [darkMode, setDarkMode] = useContext(DarkContext) 
 
+    const roomsClass = darkMode ? 'rooms-dark':'rooms-light'
     
     const RoomsArray = [ 
         {name: 'Penthouse', price: 4500, description: 'Enjoy the stunning views of the city skyline from our luxurious penthouse suite, complete with modern amenities and spacious living areas.', tags: 'prem', image: 'https://cdn.pixabay.com/photo/2014/07/10/17/17/hotel-389256_960_720.jpg'},
@@ -34,7 +37,7 @@ function Rooms({ tag }) {
         : RoomsArray.filter(room => room.tags === tag.filter);
 
     const RoomsElement = FilteredRooms.map(room => (
-        <div className='rooms-room' key={room.name} onClick={() => setSelectedRoom(room)}> 
+        <div className={`rooms-room ${roomsClass}`} key={room.name} onClick={() => setSelectedRoom(room)}> 
             <h1>{room.name}</h1>
             <p>{room.description}</p>
             <img className='room-img' src={room.image} alt={room.name}></img>
@@ -42,7 +45,7 @@ function Rooms({ tag }) {
     ));
 
     return (
-        <div className='rooms'>
+        <div className={`rooms`}>
             {RoomsElement.length > 0 ? RoomsElement : <p>No available rooms found with this tag.</p>}
         </div>
     );

@@ -5,16 +5,23 @@ import './Navigation.css'
 import { UserContext } from '../../App'
 import { DarkContext } from '../../App'
 
+import DarkButton from '../Dark/DarkButton'
+
 function Navigation() {
   const [user, setUser] = useContext(UserContext)
+  const [darkMode, setDarkMode] = useContext(DarkContext)
+
+
+  const navClass = darkMode ? 'nav-dark':'nav-light'
   return (
-    <div className='navigation'>
+    <div className={`navigation ${navClass}`}>
       <nav> 
         <ul> 
             <section className='segment'> 
                 <h1 className='title'><Link to='/'>Lux Haven Hotels</Link></h1>
             </section>
             <section className='segment'> 
+                <DarkButton />
                 <li className='gen-link'><Link to='/manage'>Manage bookings</Link></li>
                 <li className='gen-link'><Link to='/settings'>Settings</Link></li>
                 <li className='nav-user'><Link>{user.username}</Link></li>

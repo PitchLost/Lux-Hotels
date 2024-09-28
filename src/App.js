@@ -14,12 +14,14 @@ function App() {
   const [selectedRoom, setSelectedRoom] = useState(null)
   const [darkMode, setDarkMode] = useState(false)
 
+  const appClass = darkMode ? 'app-dark':'app-light'
+
   
   
 
   
   return (
-    <div className="App">
+    <div className={`App ${appClass}`}>
       <Router>
         <UserContext.Provider value={[user, setUser]}>
           <DarkContext.Provider value={[darkMode, setDarkMode]}>
