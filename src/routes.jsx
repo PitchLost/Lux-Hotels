@@ -8,7 +8,7 @@ import Room from './Components/Room/Room';
 import View from './Components/Room/View/View';
 import Booking from './Components/Booking/Booking';
 import Settings from './Components/Settings/Settings';
-
+import Manage from './Components/Booking/Manage/Manage';
 // Best to not modify any of this add onto it but try not change anything
 
 function AppRoutes() {
@@ -19,6 +19,7 @@ function AppRoutes() {
         <Route path="/view" element={<View />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/manage" element={<Manage />} />
     </Routes>
   );
 }
