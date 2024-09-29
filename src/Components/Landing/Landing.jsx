@@ -1,11 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Image1 from './Assets/lobby-398845_1920.jpg';
+
 import './Landing.css';
 
 function Landing() {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate() // For navigation to /room
   return (
     <div className="landing-container">
       <h1>Welcome to Lux Hotels,</h1>

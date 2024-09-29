@@ -2,17 +2,21 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import './Navigation.css'
 
+// Import UserContext and DarkContext from App.js
 import { UserContext } from '../../App'
 import { DarkContext } from '../../App'
 
-import DarkButton from '../Dark/DarkButton'
+import DarkButton from '../Dark/DarkButton' // Import the DarkButton which can be used anywhere in the app
 
 function Navigation() {
-  const [user, setUser] = useContext(UserContext)
-  const [darkMode, setDarkMode] = useContext(DarkContext)
+
+  const [user, setUser] = useContext(UserContext) // Get the values of user from the UserContext
+  const [darkMode, setDarkMode] = useContext(DarkContext) // Get the darkMode values from DarkContext
 
 
-  const navClass = darkMode ? 'nav-dark':'nav-light'
+  const navClass = darkMode ? 'nav-dark':'nav-light' // This is used to set the navigation between dark mode and light mode
+
+  // Content
   return (
     <div className={`navigation ${navClass}`}>
       <nav> 

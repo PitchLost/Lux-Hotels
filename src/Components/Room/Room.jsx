@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import Tags from './Tags/Tags'
-import Rooms from './Rooms/Rooms'
 import './Room.css'
 
-function Room() {
-    const [selectedTag, setSelectedTag] = useState({label: 'Premium', filter: 'prem'})
+// Import components
+import Tags from './Tags/Tags'
+import Rooms from './Rooms/Rooms'
 
+
+function Room() {
+    const [selectedTag, setSelectedTag] = useState({label: 'Premium', filter: 'prem'}) // Selected Tag state for room filtering
+
+    // Content
   return (
     <div className='room'>
       <h1 className='room-main-header'>View our available rooms</h1>

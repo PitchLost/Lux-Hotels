@@ -2,16 +2,20 @@ import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Rooms.css';
 
+// Import Contexts
 import { RoomContext } from '../../../App';
 import { DarkContext } from '../../../App';
 
 function Rooms({ tag }) {
     const navigate = useNavigate()
-    const [selectedRoom, setSelectedRoom] = useContext(RoomContext)
-    const [darkMode, setDarkMode] = useContext(DarkContext) 
+    const [selectedRoom, setSelectedRoom] = useContext(RoomContext) // Get the selectedRoom state from the RoomContext
+    const [darkMode, setDarkMode] = useContext(DarkContext)  // Get the DarkMode settings from the DarkContext
 
-    const roomsClass = darkMode ? 'rooms-dark':'rooms-light'
+    const roomsClass = darkMode ? 'rooms-dark':'rooms-light' // Use this to set rooms between light mode or darkmode
     
+
+
+    // Define the rooms
     const RoomsArray = [ 
         {name: 'Penthouse', price: 4500, description: 'Enjoy the stunning views of the city skyline from our luxurious penthouse suite, complete with modern amenities and spacious living areas.', tags: 'prem', image: 'https://cdn.pixabay.com/photo/2014/07/10/17/17/hotel-389256_960_720.jpg'},
         {name: 'Penthouse Basic', price: 4000, description: 'A more affordable option of our penthouse, offering beautiful views without compromising comfort.', tags: 'prem', image: 'https://cdn.pixabay.com/photo/2016/10/13/09/06/travel-1737168_960_720.jpg'},
@@ -24,6 +28,7 @@ function Rooms({ tag }) {
         {name: '2 Singles', price: 200, description: 'This room features two single beds, ideal for friends or colleagues traveling together.', tags: 'basic', image: 'https://cdn.pixabay.com/photo/2021/12/18/06/13/hotel-6878054_1280.jpg'},
     ];
 
+    // Navigate to the /view route if the room is not null. This will be fired anytime the selectedRoom state changes so usually when a room is clicked on
     useEffect(() => { 
         if (selectedRoom !== null) { 
             navigate('/view')
@@ -31,7 +36,7 @@ function Rooms({ tag }) {
     }, [selectedRoom])
 
 
-    // If tag.filter is empty, show all rooms; otherwise, filter based on tag
+    // If tag.filter is empty, show all rooms; otherwise, filter based on tag. At the moment there is no case where the tag will be empty but its there if needed
     const FilteredRooms = tag.filter === '' 
         ? RoomsArray 
         : RoomsArray.filter(room => room.tags === tag.filter);
@@ -44,6 +49,7 @@ function Rooms({ tag }) {
         </div>
     ));
 
+    // Content
     return (
         <div className={`rooms`}>
             {RoomsElement.length > 0 ? RoomsElement : <p>No available rooms found with this tag.</p>}
