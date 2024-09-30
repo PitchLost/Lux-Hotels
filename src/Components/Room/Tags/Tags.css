@@ -39,6 +39,21 @@
     top: 11vh;
 }
 
+.tags-ribbon { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 7vh;
+    background-color: white;
+    position: sticky;
+    top: 10vh;
+}
+
+.room-dark { 
+    background-color: black;
+}
+
 
 @media (max-width: 600px) { 
 
