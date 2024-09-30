@@ -74,17 +74,16 @@ ul {
 
 /* Mobile-specific adjustments */
 @media (max-width: 600px) { 
-  nav {
-    padding: 10px;
-  }
+
+
 
   ul {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .segment {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     max-height: none;
   }
@@ -94,7 +93,7 @@ ul {
   }
 
   .segment li {
-    margin: 10px 0;
+    margin: 10px 10px;
   }
 
   .segment li.book-btn a {

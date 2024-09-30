@@ -22,7 +22,7 @@ function Navigation() {
       <nav> 
         <ul> 
             <section className='segment'> 
-                <h1 className='title'><Link to='/'>Lux Haven Hotels</Link></h1>
+                <h1 className='title'><Link to='/'>Lux Hotels</Link></h1>
             </section>
             <section className='segment'> 
                 <DarkButton />
