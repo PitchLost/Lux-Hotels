@@ -13,8 +13,3 @@
     flex-direction: column;
 }
 
-.room-tag-header { 
-    color: #ff4f3b;;
-    position: sticky;
-    top: 11vh;
-}

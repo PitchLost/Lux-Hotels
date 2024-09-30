@@ -5,8 +5,6 @@
     flex-direction: row;
     width: 100vw;
     padding: 10px 0; /* Added padding for spacing */
-    position: sticky;
-    top: 10vh;
     background-color: white;
 }
 
@@ -15,18 +13,18 @@
 }
 
 .tag {
-    display: flex; /* Flexbox to make gap and alignment work */
-    justify-content: center; /* Align content inside each tag */
-    align-items: center; /* Align vertically */
-    width: 8vw; /* Slightly increased width for better visibility */
-    height: 6vh; /* Slightly increased height for a more balanced look */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    width: 100px; 
+    height: 6vh; 
     color: white;
     background-color: #ff6f61;
-    border-radius: 25px; /* Increased border-radius for a more modern feel */
-    font-size: 1rem; /* Use rem for responsive typography */
-    font-weight: 500; /* Slightly bolder text */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    border-radius: 25px; 
+    font-size: 1rem; 
+    font-weight: 500; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 
@@ -35,14 +33,21 @@
     transform: scale(1.05); /* Slightly enlarges the tag on hover */
 }
 
+.room-tag-header { 
+    color: #ff4f3b;;
+    position: sticky;
+    top: 11vh;
+}
 
-@media (max-width: 400px) { 
+
+@media (max-width: 600px) { 
+
+    .room-main-header { 
+        margin-bottom: 0px;
+    }
+
     .tags { 
-        background-color: gray;
         overflow-x:hidden; 
         position: relative;
-    }
-    .tag { 
-        width: 100px;
     }
 }

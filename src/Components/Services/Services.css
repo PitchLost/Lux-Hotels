@@ -35,7 +35,7 @@
     flex-direction: column;
 }
 
-@media (max-width: 400px) { 
+@media (max-width: 600px) { 
     .services ul { 
         flex-direction: column;
     }
