@@ -2,7 +2,10 @@
 
 .services {
     padding: 2rem;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -17,6 +20,8 @@
 }
 
 .services ul {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     padding: 0;
 }
@@ -26,5 +31,13 @@
     padding: 0.5rem 0;
     color: #555;
     border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 400px) { 
+    .services ul { 
+        flex-direction: column;
+    }
 }
 
