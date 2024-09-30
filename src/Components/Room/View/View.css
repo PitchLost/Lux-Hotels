@@ -4,7 +4,6 @@
     margin: 0 auto;
     margin-bottom: 5vh;
     padding: 20px;
-    background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -19,7 +18,6 @@
 /* Heading styles */
 .view-container h1 {
     font-size: 2.2rem;
-    color: #333;
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
@@ -48,7 +46,6 @@
 /* Paragraph styling */
 .view p {
     font-size: 1.2rem;
-    color: #555;
     line-height: 1.6;
 }
 

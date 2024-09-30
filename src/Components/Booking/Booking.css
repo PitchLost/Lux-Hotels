@@ -3,7 +3,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -12,14 +12,12 @@
 
 .booking h1 {
     font-size: 2rem;
-    color: #333;
     margin-bottom: 20px;
     letter-spacing: 0.5px;
 }
 
 .booking p {
     font-size: 1.2rem;
-    color: #666;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -27,9 +25,10 @@
 /* Booking Room styling */
 .booking-room {
     margin: 20px 0;
-    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
+    border-style: solid;
+    border-color: gray;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -41,13 +40,12 @@
 
 .booking-room h1 {
     font-size: 1.8rem;
-    color: #444;
     margin-bottom: 10px;
 }
 
 .booking-room p {
     font-size: 1.5rem;
-    color: #777;
+
 }
 
 
@@ -57,6 +55,9 @@
     height: 3vh;
     border-radius: 15px;
     font-size: 4mm;
+    background-color: transparent;
+    color: red;
+    text-align: center;
     
 }
 
