@@ -1,9 +1,11 @@
 import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { RoomContext } from '../../App';
 import './Booking.css';
 
 import { purchaseRoom } from '../../Hooks/purchaseRoom'
 function Booking() {
+  const navigate  = useNavigate()
 
 
   const [selectedRoom] = useContext(RoomContext); // Import the selected room from the RoomContext
@@ -18,6 +20,7 @@ function Booking() {
     setTotalPrice(selectedRoom.price * nightsValue); // Update the total price
   };
 
+  
 
   // Content
   return (
