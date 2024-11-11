@@ -1,3 +1,4 @@
+// Import react stuff
 import React, { useContext, useState } from 'react';
 import './Tags.css'
 
@@ -5,11 +6,12 @@ import { DarkContext } from '../../../App';
 
 function Tags({setSelectedTag}) {
 
+    // States
     const [darkMode, setDarkMode] = useContext(DarkContext) // Get the DarkMode state from DarkContext
     const tagsClass = darkMode ? 'tags-dark':'tags-light' // Set the class names for dark mode and light mode
 
-    // Defined the tags. More can be added as needed but will also need updating in rooms.jsx
-    
+
+    // Defined the tags. 
     const tags = [ 
         {label: 'Premium', filter: 'prem'},
         {label: 'Economy+', filter: 'eco2'},
@@ -17,7 +19,7 @@ function Tags({setSelectedTag}) {
         {label: 'Basic', filter: 'basic'},
     ];
 
-    // Handle the click of a tag
+    // Handle the click of a tag function
     function handleTagClick(tag) { 
         console.log('Setting tag to:', tag)
         setSelectedTag(tag)

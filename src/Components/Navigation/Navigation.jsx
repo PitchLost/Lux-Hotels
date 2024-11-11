@@ -1,15 +1,19 @@
+// This one is a lot more commented as I tend to change nav bars quite a bit so it was vital for me to be able to quickly change little things
+
+// Import react stuff
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import './Navigation.css'
 
-// Import UserContext and DarkContext from App.js
-import { UserContext } from '../../App'
+// Import global contexts
+import { UserContext } from '../../App' // Keep in mind that the user context is purely for a testing enviroment here
 import { DarkContext } from '../../App'
 
-import DarkButton from '../Dark/DarkButton' // Import the DarkButton which can be used anywhere in the app
+// Import additional components
+import DarkButton from '../Dark/DarkButton' // Import the dark mode button for the nav bar
 
 function Navigation() {
-
+  // States
   const [user, setUser] = useContext(UserContext) // Get the values of user from the UserContext
   const [darkMode, setDarkMode] = useContext(DarkContext) // Get the darkMode values from DarkContext
 

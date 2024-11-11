@@ -1,3 +1,4 @@
+// Import react stuff
 import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Rooms.css';
@@ -6,11 +7,16 @@ import './Rooms.css';
 import { RoomContext } from '../../../App';
 import { DarkContext } from '../../../App';
 
+
 function Rooms({ tag }) {
+    // Define the navigate function
     const navigate = useNavigate()
+    
+    // States
     const [selectedRoom, setSelectedRoom] = useContext(RoomContext) // Get the selectedRoom state from the RoomContext
     const [darkMode, setDarkMode] = useContext(DarkContext)  // Get the DarkMode settings from the DarkContext
 
+    // Dynamic classnames
     const roomsClass = darkMode ? 'rooms-dark':'rooms-light' // Use this to set rooms between light mode or darkmode
     
 
@@ -37,6 +43,7 @@ function Rooms({ tag }) {
 
 
     // If tag.filter is empty, show all rooms; otherwise, filter based on tag. At the moment there is no case where the tag will be empty but its there if needed
+    // Not gonna lie the tag script is kinda scuffed but it works and its somewhat understandable
     const FilteredRooms = tag.filter === '' 
         ? RoomsArray 
         : RoomsArray.filter(room => room.tags === tag.filter);

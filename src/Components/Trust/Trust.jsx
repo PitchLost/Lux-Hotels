@@ -1,8 +1,11 @@
+// Import react stuff
 import React from 'react';
 import Image1 from './Assets/receptionists-5975962_1920.jpg';
 import './Trust.css'; // Import CSS
 
 function Trust() {
+
+  // Content
   return (
     <div className="trust-container">
       <h1 className="trust-title">Why Us?</h1>

@@ -1,13 +1,20 @@
+// Import react stuff
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RoomContext } from '../../App';
 import './Booking.css';
 
+// Import other components and hooks
 import { purchaseRoom } from '../../Hooks/purchaseRoom'
+
+
 function Booking() {
+
+  // Define the useNavigate function
   const navigate  = useNavigate()
 
 
+  // States
   const [selectedRoom] = useContext(RoomContext); // Import the selected room from the RoomContext
   const [nights, setNights] = useState(1); // Default to 1 night
   const [totalPrice, setTotalPrice] = useState(selectedRoom.price); // Default to the selectedRoom price

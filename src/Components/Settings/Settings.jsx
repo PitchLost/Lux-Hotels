@@ -1,13 +1,16 @@
+// Import react stuff
 import React, { useContext, useState } from 'react';
 import './Settings.css';
 
-import { DarkContext } from '../../App';
-import { UserContext } from '../../App';
+// Import contexts
+import { DarkContext } from '../../App'; // Dark mode
+import { UserContext } from '../../App'; // User info (Remember this is just a testing enviroment)
 
 function Settings() {
+
+  // States
   const [user, setUser] = useContext(UserContext);
-  const [password, setPassword] = useState('');
-  const [notifications, setNotifications] = useState(true);
+  const [notifications, setNotifications] = useState(true); // This does not actually do anything if true
   const [darkMode, setDarkMode] = useContext(DarkContext)
 
 
@@ -16,9 +19,10 @@ function Settings() {
   const handleNotificationsToggle = () => setNotifications(!notifications);
   const handleDarkModeToggle = () => setDarkMode(!darkMode)
 
-  // Settings Dark Mode 
+  // Dark mode dynamic classname
   const settingsClass = darkMode ? 'settings-dark':'settings-light'
 
+  // Content
   return (
     <div className={`settings-tab ${settingsClass}`}>
       <h2>Settings</h2>

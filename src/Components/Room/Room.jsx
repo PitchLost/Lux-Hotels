@@ -1,19 +1,23 @@
+// Import react stuff
 import React, { useContext, useEffect, useState } from 'react'
 import './Room.css'
 
-// Import components
+// Import additional components
 import Tags from './Tags/Tags'
 import Rooms from './Rooms/Rooms'
 
-import { DarkContext } from '../../App'
+// Import contexts
+import { DarkContext } from '../../App' // Dark mode context
 
 
 function Room() {
+
+    // States
     const [darkMode ,setDarkMode] = useContext(DarkContext)
     const roomClass = darkMode ? 'room-dark': 'room-light'
     const [selectedTag, setSelectedTag] = useState({label: 'Premium', filter: 'prem'}) // Selected Tag state for room filtering
 
-    // Content
+  // Content
   return (
     <div className='room'>
       <div className={`tags-ribbon ${roomClass}`}>

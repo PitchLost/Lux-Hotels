@@ -1,14 +1,19 @@
+// Import react stuff
 import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-
-import { RoomContext } from '../../../App' // RoomContext for the selectedRoom state
-
 import './View.css'
 
+// Import global contexts
+import { RoomContext } from '../../../App' // RoomContext for the selectedRoom state
+
+
 function View() {
+    // Define the navigate function
     const navigate = useNavigate()
+
+    // States
     const [selectedRoom, setSelectedRoom] = useContext(RoomContext) // Get the selectedRoom from the RoomContext
+
 
     // Return to room selection function
     function handleReturnToRoom() { 
@@ -22,7 +27,7 @@ function View() {
             navigate('/')
         }
 
-    }, [selectedRoom, navigate])  // Dependency array ensures useEffect triggers when selectedRoom or navigate changes
+    }, [selectedRoom, navigate])  // Dependency array ensures the returnToRoom function triggers when selectedRoom or navigate changes
 
     if (selectedRoom == null) {
         return null  // Return null if navigating away, to avoid rendering the component

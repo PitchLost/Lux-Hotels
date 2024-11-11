@@ -1,3 +1,4 @@
+// Import react stuff
 import React, { useContext } from 'react';
 import { DarkContext } from '../../App';
 import './DarkButton.css'
